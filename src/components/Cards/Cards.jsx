@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Cards = ({isDarkMode}) => {
+const Cards = ({ isDarkMode }) => {
   const [item, setItem] = useState([]);
 
   const getData = async () => {
@@ -24,11 +24,11 @@ const Cards = ({isDarkMode}) => {
           const { id, title, description } = el;
           return (
             <div
-            key={id}
-            className={`card border mb-5 ${
-              isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
-            }`}
-          >
+              key={id}
+              className={`card border mb-5 ${
+                isDarkMode ? "bg-gray-800 text-white" : "bg-white text-black"
+              }`}
+            >
               <div className="card-body items-center">
                 <h2 className="card-title">{title}</h2>
                 <p> {description}</p>
@@ -44,5 +44,5 @@ const Cards = ({isDarkMode}) => {
 export default Cards;
 
 Cards.propTypes = {
-   isDarkMode: PropTypes.bool
-}
+  isDarkMode: PropTypes.bool,
+};
