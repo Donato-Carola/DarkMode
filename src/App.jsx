@@ -18,7 +18,7 @@ function App() {
       document.documentElement.classList.add("bg-white", "text-black");
       document.documentElement.classList.remove("bg-gray-900", "text-white");
     }
-  }, [isDarkMode]);
+  }, [isDarkMode]);     // un array che contiene quei valori la quale variazione chiama l'esecuzione del nostro useEffect
 
   return (
     <div>
